@@ -35,7 +35,7 @@ $logements = $response->fetchAll(PDO::FETCH_ASSOC);
 
         <div class="card-body">
 
-          <a href="show.php"><img src="uploads/<?= $logement["photo"] ?>" alt="" height="100px" style="display: block; 
+          <a href="show.php?id=<?= $logement["id_logement"] ?>"><img src="uploads/<?= $logement["photo"] ?>" alt="" height="100px" style="display: block; 
                 margin-left: auto; margin-right: auto"></a>
 
           <br>
@@ -55,8 +55,6 @@ $logements = $response->fetchAll(PDO::FETCH_ASSOC);
 
           <div class="btn-group" role="group" aria-label="Basic example" style="width: 20px">
             <button type="button" class="btn btn-secondary"><a href="show.php?id=<?= $logement["id_logement"] ?>" class="text-warning stretched-link">Afficher</a></button>
-            <button type="button" class="btn btn-secondary"><a href="modifProduit.php?id=<?= $logement["id_logement"] ?>" class="text-warning stretched-link">Modifier</a></button>
-            <button type="button" class="btn btn-secondary"><a href="suppProduit.php?id=<?= $logement["id_logement"] ?>" class="text-warning stretched-link">Supprimer</a></button>
           </div>
 
         </div>
