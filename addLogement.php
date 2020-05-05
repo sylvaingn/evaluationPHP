@@ -18,6 +18,8 @@
 
 <body>
 
+    <?php include("fix/navbar.php") ?>
+
     <form action="traitementAjout.php" method="POST" enctype="multipart/form-data">
 
         <!--  titre, adresse, ville, code postal maxlength="5", surface, prix, type -->
@@ -39,7 +41,7 @@
 
         <div class="form-group">
             <label for="formCode">Code postal :</label>
-            <input name="cp" type="text" maxlenght="5" class="form-control" id="formCode" required>
+            <input name="cp" type="number" value="0" min="01100" max="99000" class="form-control" id="formCode" required>
         </div>
 
         <div class="form-group">
@@ -68,7 +70,7 @@
 
         <div class="form-group">
             <label for="formDescription">Description :</label>
-            <input name="description" type="text" class="form-control" id="formDescription" required>
+            <input name="description" type="text" class="form-control" id="formDescription" >
         </div>
 
 
