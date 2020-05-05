@@ -39,7 +39,7 @@
 
         <div class="form-group">
             <label for="formCode">Code postal :</label>
-            <input name="code" type="number" class="form-control" id="formCode" maxlength="5" required>
+            <input name="code" type="text" maxlenght="5" class="form-control" id="formCode"  required>
         </div>
 
         <div class="form-group">
@@ -66,7 +66,7 @@
             <input name="photo" type="file" class="form-control" id="formPhoto" required>
         </div>
 
-        <button type="submit" class="btn btn-primary">Ajouter ce produit !</button>
+        <button type="submit" class="btn btn-primary">Ajouter cette annonce !</button>
 
     </form>
 
