@@ -29,8 +29,10 @@ function saveFile($file)
     $pathInfoData = pathinfo($file["name"]);
     $fileExtension = $pathInfoData["extension"];
     $fileName = $pathInfoData["filename"];
+    $date = new DateTime();
+    $currentDate = $date->getTimestamp();
 
-    $nouveauNom = $fileName . uniqid() . "." . $fileExtension;
+    $nouveauNom = $fileName ."-". $currentDate . "." . $fileExtension;
 
     move_uploaded_file($file["tmp_name"], __DIR__ . "/uploads/" . $nouveauNom);
 
