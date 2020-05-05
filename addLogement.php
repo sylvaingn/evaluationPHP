@@ -39,7 +39,7 @@
 
         <div class="form-group">
             <label for="formCode">Code postal :</label>
-            <input name="code" type="text" maxlenght="5" class="form-control" id="formCode"  required>
+            <input name="cp" type="text" maxlenght="5" class="form-control" id="formCode" required>
         </div>
 
         <div class="form-group">
@@ -52,6 +52,11 @@
             <input name="prix" type="number" class="form-control" id="formPrix" required>
         </div>
 
+        <div class="form-group">
+            <label for="formPhoto">Photo :</label>
+            <input name="photo" type="file" class="form-control" id="formPhoto" required>
+        </div>
+
 
         <div class="form-group">
             <label for="formType">Sélectionnez le type :</label>
@@ -62,9 +67,10 @@
         </div>
 
         <div class="form-group">
-            <label for="formPhoto">Photo :</label>
-            <input name="photo" type="file" class="form-control" id="formPhoto" required>
+            <label for="formDescription">Description :</label>
+            <input name="description" type="text" class="form-control" id="formDescription" required>
         </div>
+
 
         <button type="submit" class="btn btn-primary">Ajouter cette annonce !</button>
 
