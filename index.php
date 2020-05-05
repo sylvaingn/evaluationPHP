@@ -33,8 +33,24 @@ $logements = $response->fetchAll(PDO::FETCH_ASSOC);
             
             <div class="card-body">
 
+                <img src="uploads/<?=$logement["photo"]?>" alt="" height="100px" style="display: block; 
+                margin-left: auto; margin-right: auto" >
+                
+                <br>
+
                 <h5 class="card-title" style="text-align: center"><?= $logement["titre"] ?></h5>
                 <p class="card-text"><?= $logement["description"]?></p>
+                <ul>
+                  <li><strong>Adresse :</strong> <?=$logement["adresse"] ?></li>
+                  <li><strong>Code postal</strong> : <?=$logement["cp"] ?></li>
+                  <li><strong>Ville :</strong> <?=$logement["ville"] ?></li>
+                  <li><strong>Surface :</strong> <?=$logement["surface"] ?></li>
+                  <li><strong>Prix :</strong> <?=$logement["prix"] ?> €</li>
+                  <li><strong>Type :</strong> <?=$logement["type"] ?></li>
+                </ul>
+
+
+
                 <div class="btn-group" role="group" aria-label="Basic example" style="width: 20px">
                     <!-- <button type="button" class="btn btn-secondary"><a href="show.php?id=<?= $produit["id"]?>" class="text-warning stretched-link">Afficher</a></button>
                     <button type="button" class="btn btn-secondary"><a href="modifProduit.php?id=<?= $produit["id"] ?>" class="text-warning stretched-link">Modifier</a></button>
